@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retrieve File</title>
+
+  <!-- Comfortaa font -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/search">Search</a>
+      <a href="/weather">Weather</a>
+      <a href="/retrieve">Retrieve</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Retrieve File</h1>
+
+    <!-- Retrieve form -->
+    <form action="/retrieve" method="get" class="form-container">
+      <input type="text" name="url" placeholder="Enter file URL..." required>
+      <button type="submit">Retrieve</button>
+    </form>
+
+    <!-- Retrieved content -->
+    <% if (content) { %>
+      <div class="results">
+        <h2>File Content:</h2>
+        <pre style="white-space: pre-wrap;"><%= content %></pre>
+      </div>
+    <% } %>
+  </main>
+</body>
+</html>

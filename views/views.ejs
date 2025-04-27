@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Google Search</h1>
+  <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Search..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (results) { %>
+    <ul>
+      <% results.forEach(item => { %>
+        <li><a href="<%= item.link %>"><%= item.title %></a> - <%= item.snippet %></li>
+      <% }); %>
+    </ul>
+  <% } %>
+</body>
+</html>

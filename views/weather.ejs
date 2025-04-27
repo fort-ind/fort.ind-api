@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Lookup</title>
+
+  <!-- Comfortaa font -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/search">Search</a>
+      <a href="/weather">Weather</a>
+      <a href="/retrieve">Retrieve</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Weather Lookup</h1>
+
+    <!-- Weather form -->
+    <form action="/weather" method="get" class="form-container">
+      <input type="text" name="city" placeholder="Enter city name..." required>
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <!-- Weather results -->
+    <% if (weather) { %>
+      <div class="results">
+        <h2>Weather in <%= weather.name %>:</h2>
+        <ul>
+          <li><strong>Temperature:</strong> <%= weather.temp %>°C</li>
+          <li><strong>Weather:</strong> <%= weather.description %></li>
+          <li><strong>Humidity:</strong> <%= weather.humidity %>%</li>
+          <li><strong>Wind:</strong> <%= weather.windSpeed %> km/h</li>
+        </ul>
+      </div>
+    <% } %>
+  </main>
+</body>
+</html>

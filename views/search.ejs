@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Search</title>
+
+  <!-- Load Comfortaa font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/search">Search</a>
+      <a href="/weather">Weather</a>
+      <a href="/retrieve">Retrieve</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Google Search</h1>
+
+    <!-- Search form -->
+    <form action="/search" method="get" class="form-container">
+      <input type="text" name="query" placeholder="Enter your search..." value="<%= query %>" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Display search results -->
+    <% if (results && results.length > 0) { %>
+      <div class="results">
+        <h2>Results for "<%= query %>":</h2>
+        <ul>
+          <% results.forEach(item => { %>
+            <li>
+              <a href="<%= item.link %>" target="_blank"><%= item.title %></a>
+              <p><%= item.snippet %></p>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+    <% } else if (typeof query !== 'undefined' && query.length > 0) { %>
+      <p>No results found for "<%= query %>".</p>
+    <% } %>
+  </main>
+
+</body>
+</html>

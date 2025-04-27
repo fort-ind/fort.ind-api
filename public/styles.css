@@ -1,0 +1,85 @@
+/* Apply Comfortaa font to everything */
+body {
+  font-family: 'Comfortaa', cursive;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007BFF;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 700; /* Comfortaa bold */
+}
+
+.form-container {
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Comfortaa', cursive;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Comfortaa', cursive;
+  background-color: #28A745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.results li {
+  background: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.results a {
+  font-size: 18px;
+  color: #007BFF;
+  font-weight: 600;
+}
+
+.results a:hover {
+  text-decoration: underline;
+}
