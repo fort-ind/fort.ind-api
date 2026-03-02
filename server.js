@@ -10,7 +10,7 @@ const app = express();
 const port = 3000;
 
 // Load server API key
-const serverApiKey = loadOrCreateApiKey(); // Auto handle key
+loadOrCreateApiKey(); // Auto handle key
 
 // Set view engine (EJS)
 app.set('view engine', 'ejs');
