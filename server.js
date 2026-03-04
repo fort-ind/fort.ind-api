@@ -35,7 +35,7 @@ app.get('/search', async (req, res) => {
     res.render('search', { results, query }); // Pass both results and query to view
   } catch (error) {
     console.error(error); // Log the error for debugging
-    res.status(500).send('Error fetching search results.');
+    res.status(500).send('Unable to fetch search results at this time. Please check your search query and try again.');
   }
 });
 
