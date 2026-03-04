@@ -35,7 +35,7 @@ app.get('/search', async (req, res) => {
     res.render('search', { results, query }); // Pass both results and query to view
   } catch (error) {
     console.error(error); // Log the error for debugging
-    res.status(500).send('Error fetching search results.');
+    res.status(500).send('Unable to fetch search results at this time. Please check your search query and try again.');
   }
 });
 
@@ -50,7 +50,7 @@ app.get('/weather', async (req, res) => {
     res.render('weather', { weather });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error fetching weather data.');
+    res.status(500).send('Unable to retrieve weather information at this time. Please verify the city name and try again.');
   }
 });
 
@@ -65,7 +65,7 @@ app.get('/retrieve', async (req, res) => {
     res.render('retrieve', { content });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error retrieving file.');
+    res.status(500).send('Unable to retrieve the requested file. Please check the URL and try again.');
   }
 });
 
