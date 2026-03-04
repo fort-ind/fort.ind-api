@@ -50,7 +50,7 @@ app.get('/weather', async (req, res) => {
     res.render('weather', { weather });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error fetching weather data.');
+    res.status(500).send('Unable to retrieve weather information at this time. Please verify the city name and try again.');
   }
 });
 
