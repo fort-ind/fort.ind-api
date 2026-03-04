@@ -65,7 +65,7 @@ app.get('/retrieve', async (req, res) => {
     res.render('retrieve', { content });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error retrieving file.');
+    res.status(500).send('Unable to retrieve the requested file. Please check the URL and try again.');
   }
 });
 
